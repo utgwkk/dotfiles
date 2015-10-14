@@ -13,6 +13,7 @@ call neobundle#begin(expand('~/.vim/bundle/'))
 NeoBundleFetch 'Shougo/neobundle.vim'
 ""}}}
 
+set encoding=utf-8
 set nu
 set cursorline
 set cursorcolumn
