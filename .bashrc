@@ -52,4 +52,7 @@ if ! shopt -oq posix; then
   fi
 fi
 
+GIT_PS1_SHOWDIRTYSTATE=true
+export PS1='\h\[\033[00m\]:\W\[\033[31m\]$(__git_ps1 [%s])\[\033[00m\]\$ '
+
 source ~/.bash_profile
