@@ -2,9 +2,15 @@
 
 .pane {
   background: url(@background-img-path);
-  background-size: cover;
+  background-size: contain;
 }
 
 .editor {
   background: rgba(0, 0, 0, .70);
+}
+
+.vertical {
+  .pane {
+    padding: 0;
+  }
 }
