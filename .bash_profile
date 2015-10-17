@@ -10,6 +10,7 @@ alias ll='ls -lF'
 alias la='ls -a'
 alias l='ls -p'
 alias ks='ls'
+alias grep='grep --color=auto'
 
 if [[ -s ~/.nvm/nvm.sh ]];
   then source ~/.nvm/nvm.sh
