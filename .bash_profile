@@ -10,3 +10,7 @@ alias ll='ls -lF'
 alias la='ls -a'
 alias l='ls -p'
 alias ks='ls'
+
+if [[ -s ~/.nvm/nvm.sh ]];
+  then source ~/.nvm/nvm.sh
+fi
