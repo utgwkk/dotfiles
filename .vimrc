@@ -39,3 +39,6 @@ set smartindent
 
 syntax on
 
+" for Python
+autocmd FileType python setl shiftwidth=4 softtabstop=4 tabstop=4
+autocmd FileType python setl autoindent smartindent cinwords=if,elif,else,for,while,try,except,finally,def,class,with
