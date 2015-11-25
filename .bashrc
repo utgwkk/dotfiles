@@ -57,6 +57,5 @@ export PS1='\h\[\033[00m\]:\W\[\033[31m\]$(__git_ps1 [%s])\[\033[00m\]\$ '
 
 source ~/.bash_profile
 
-if [ -f "$HOME/bash_completion.d/pip" ] ; then
-    . $HOME/bash_completion.d/pip
-fi
+### Added by the Heroku Toolbelt
+export PATH="/usr/local/heroku/bin:$PATH"
