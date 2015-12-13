@@ -1,5 +1,6 @@
 @background-img-path: "file:///home/utgw/Pictures/rumia_00109.jpg";
 @editor_font: "Ricty Diminished Discord";
+@other_font: "Koruri", "Meiryo";
 
 .pane {
   background: url(@background-img-path);
@@ -11,8 +12,16 @@
   font-family: @editor_font;
 }
 
+.tree-view {
+  font-family: @other_font;
+}
+
 .vertical {
   .pane {
     padding: 0;
   }
+}
+
+atom-workspace {
+  font-family: @other_font;
 }
