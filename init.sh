@@ -1,5 +1,8 @@
 #!/bin/sh
 
+sudo apt-get update
+sudo apt-get upgrade -y
+
 if ! type git >/dev/null 2>&1; then
   echo "Installing git."
   sudo apt-get install git
@@ -9,7 +12,7 @@ fi
 
 if [ ! -d ~/dotfiles ]; then
   echo "Setting dotfiles."
-  git clone git@github.com:utgw/dotfiles ~/dotfiles
+  git clone https://github.com/utgw/dotfiles.git ~/dotfiles
   cd ~/
   for f in ~/dotfiles/.*; do
     ln -f $f
