@@ -5,7 +5,7 @@ sudo apt-get upgrade -y
 
 if ! type git >/dev/null 2>&1; then
   echo "Installing git."
-  sudo apt-get install git
+  sudo apt-get install git -y
 else
   echo "git is already installed."
 fi
