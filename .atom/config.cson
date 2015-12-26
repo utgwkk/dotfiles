@@ -22,9 +22,14 @@
       "minimap-autohide": true
       selection: true
       pigments: true
+      "find-and-replace": true
+      "minimap-hide": true
+      cursorline: true
   whitespace:
     removeTrailingWhitespace: false
     ensureSingleTrailingNewline: false
+    keepMarkdownLineBreakWhitespace: false
+    ignoreWhitespaceOnCurrentLine: false
   linter: {}
   "custom-title":
     template: "<% if (relativeFilePath) { %><%= relativeFilePath %><% } else { %><%= fileName %><% } %><% if (projectPath) { %> - <%= projectPath %><% if (gitHead) { %> [<%= gitHead %>]<% } %><% } %> - Atom <%= atom.getVersion() %>"

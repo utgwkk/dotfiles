@@ -19,3 +19,14 @@
 # If you are unfamiliar with CSON, you can read more about it in the
 # Atom Flight Manual:
 # https://atom.io/docs/latest/using-atom-basic-customization#cson
+
+'.source.js':
+  'createElement':
+    'prefix': 'cre'
+    'body': 'createElement("$1")'
+  'appendChild':
+    'prefix': 'apc'
+    'body': 'appendChild($1)'
+  'setAttribute':
+    'prefix': 'seta'
+    'body': 'setAttribute("$1", "$2")'
