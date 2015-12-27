@@ -12,6 +12,8 @@ alias l='ls -p'
 alias ks='ls'
 alias grep='grep --color=auto'
 alias cls='clear'
+alias sx9='xdg-open http://sx9.jp/weather/kyoto.html'
+alias ninetan='sx9'
 
 if [[ -s ~/.nvm/nvm.sh ]];
   then source ~/.nvm/nvm.sh
