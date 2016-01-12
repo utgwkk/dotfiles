@@ -20,3 +20,6 @@ alias g='git'
 if [[ -s ~/.nvm/nvm.sh ]];
   then source ~/.nvm/nvm.sh
 fi
+
+eval `ssh-agent` > /dev/null
+ssh-add > /dev/null 2>&1
