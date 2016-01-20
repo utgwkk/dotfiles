@@ -59,7 +59,7 @@ GIT_PS1_SHOWUPSTREAM=auto
 
 source ~/git-prompt.sh
 
-export PS1="\e[32m[\W]\e[m \e[31m$(__git_ps1)\e[m\n \e[31m(⌒▽⌒) < \e[m"
+export PS1="\e[32m[\W]\e[m \e[31m\$(__git_ps1)\e[m\n \e[31m(⌒▽⌒) < \e[m"
 
 source ~/git-completion.bash
 source ~/.bash_profile
