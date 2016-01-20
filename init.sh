@@ -12,10 +12,13 @@ fi
 
 if [ ! -d ~/dotfiles ]; then
   echo "Setting dotfiles."
-  git clone https://github.com/utgw/dotfiles.git ~/dotfiles
+  git clone https://github.com/utgw/dotfiles.git ~/.dotfiles
   cd ~/
-  for f in ~/dotfiles/.*; do
+  for f in ~/.dotfiles/.*; do
     ln -f $f
+  done
+  for f in ~/.dotfiles/*; do
+    ln -df $f
   done
 else
   echo "dotfiles are already configured."
