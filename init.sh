@@ -2,6 +2,7 @@
 
 sudo apt-get update
 sudo apt-get upgrade -y
+wget https://raw.githubusercontent.com/git/git/master/contrib/completion/git-completion.bash
 
 if ! type git >/dev/null 2>&1; then
   echo "Installing git."
