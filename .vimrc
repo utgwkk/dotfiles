@@ -13,8 +13,23 @@ if has('vim_starting')
 endif
 call neobundle#begin(expand('~/.vim/bundle/'))
 NeoBundleFetch 'Shougo/neobundle.vim'
+
+NeoBundle 'Shougo/unite.vim'
+NeoBundle 'Shougo/neomru.vim'
+NeoBundle 'scrooloose/nerdtree'
+NeoBundle 'tpope/vim-rails'
+NeoBundle 'tpope/vim-endwise'
+NeoBundle 'tomtom/tcomment_vim'
+NeoBundle 'nathanaelkane/vim-indent-guides'
+NeoBundle 'tpope/vim-surround'
+NeoBundle 'vim-scripts/AnsiEsc.vim'
 NeoBundle "chriskempson/vim-tomorrow-theme"
+
 call neobundle#end()
+
+" vimを立ち上げたときに、自動的にvim-indent-guidesをオンにする
+let g:indent_guides_enable_on_vim_startup = 1
+
 if &term =~ "xterm"
   " 256 colors
   let &t_Co = 256
