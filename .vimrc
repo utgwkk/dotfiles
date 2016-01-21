@@ -23,6 +23,7 @@ NeoBundle 'tomtom/tcomment_vim'
 NeoBundle 'nathanaelkane/vim-indent-guides'
 NeoBundle 'tpope/vim-surround'
 NeoBundle 'vim-scripts/AnsiEsc.vim'
+NeoBundle 'airblade/vim-gitgutter'
 NeoBundle "chriskempson/vim-tomorrow-theme"
 
 call neobundle#end()
