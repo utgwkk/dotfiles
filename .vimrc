@@ -76,6 +76,9 @@ set autoindent
 set expandtab
 set smartindent
 
+" Search
+set incsearch
+
 " IME
 set iminsert=0
 set imsearch=-1
