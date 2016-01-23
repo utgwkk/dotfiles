@@ -61,6 +61,7 @@ set history=10000
 set wildmenu wildmode=list:longest,full
 set backspace=indent,eol,start
 set ruler
+set listchars=tab:>\ ,extends:<
 
 " File
 set nobackup
