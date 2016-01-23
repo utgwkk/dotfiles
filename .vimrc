@@ -62,6 +62,7 @@ set backspace=indent,eol,start
 set ruler
 
 " File
+set nobackup
 set noswapfile
 set autoread
 
