@@ -2,7 +2,6 @@
 
 sudo apt-get update
 sudo apt-get upgrade -y
-wget https://raw.githubusercontent.com/git/git/master/contrib/completion/git-completion.bash
 
 if ! type git >/dev/null 2>&1; then
   echo "Installing git."
@@ -14,6 +13,9 @@ fi
 if [ ! -d ~/dotfiles ]; then
   echo "Setting dotfiles."
   git clone https://github.com/utgw/dotfiles.git ~/.dotfiles
+  cd ~/.dotfiles
+  wget https://raw.githubusercontent.com/git/git/master/contrib/completion/git-completion.bash
+  wget https://raw.githubusercontent.com/git/git/master/contrib/completion/git-prompt.sh
   cd ~/
   for f in ~/.dotfiles/.*; do
     ln -f $f
