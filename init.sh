@@ -18,7 +18,7 @@ if [ ! -d ~/dotfiles ]; then
   wget https://raw.githubusercontent.com/git/git/master/contrib/completion/git-prompt.sh
   cd ~/
   for f in ~/.dotfiles/.*; do
-    ln -f $f
+    ln -sf $f
   done
   for f in ~/.dotfiles/*; do
     ln -df $f
