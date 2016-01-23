@@ -25,7 +25,7 @@ NeoBundle 'tpope/vim-surround'
 NeoBundle 'vim-scripts/AnsiEsc.vim'
 NeoBundle 'airblade/vim-gitgutter'
 NeoBundle 'Shougo/neocomplete.vim'
-NeoBundle "chriskempson/vim-tomorrow-theme"
+NeoBundle 'chriskempson/vim-tomorrow-theme'
 
 call neobundle#end()
 
