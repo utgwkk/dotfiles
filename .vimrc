@@ -74,6 +74,10 @@ set autoindent
 set expandtab
 set smartindent
 
+" IME
+set iminsert=0
+set imsearch=-1
+
 syntax on
 
 " for Python
