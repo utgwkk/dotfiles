@@ -49,6 +49,7 @@ if &term =~ "xterm"
 endif
 colorscheme Tomorrow-Night-Bright
 
+" General
 set encoding=utf-8
 set nu
 set cursorline
