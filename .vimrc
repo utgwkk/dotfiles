@@ -51,8 +51,6 @@ colorscheme Tomorrow-Night-Bright
 
 " General
 set encoding=utf-8
-set nu
-set cursorline
 set laststatus=2
 set cmdheight=2
 set showmatch
@@ -63,6 +61,12 @@ set wildmenu wildmode=list:longest,full
 set backspace=indent,eol,start
 set ruler
 set listchars=tab:>\ ,extends:<
+
+" Line
+set nu
+set cursorline
+highlight LineNr ctermfg=darkyellow
+
 
 " File
 set nobackup
