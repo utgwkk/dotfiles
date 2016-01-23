@@ -58,6 +58,8 @@ set helpheight=999
 set showcmd
 set history=10000
 set wildmenu wildmode=list:longest,full
+set backspace=indent,eol,start
+set ruler
 
 " File
 set noswapfile
