@@ -54,6 +54,7 @@ fi
 
 
 export PS1="\e[32m[\W]\e[m \e[33m\$(__git_ps1)\e[m\n \e[31m(⌒▽⌒) < \e[m"
+export LANG="ja_JP.UTF-8"
 
 source ~/.dotfiles/git-prompt.sh
 source ~/.dotfiles/git-completion.bash
