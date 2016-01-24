@@ -28,6 +28,15 @@ NeoBundle 'airblade/vim-gitgutter'
 if has('lua')
   NeoBundle 'Shougo/neocomplete.vim'
 end
+NeoBundle 'Shougo/vimproc', {
+  \ 'build' : {
+  \     'windows' : 'make -f make_mingw32.mak',
+  \     'cygwin' : 'make -f make_cygwin.mak',
+  \     'mac' : 'make -f make_mac.mak',
+  \     'unix' : 'make -f make_unix.mak',
+  \    },
+  \ }
+
 NeoBundle "chriskempson/vim-tomorrow-theme"
 
 call neobundle#end()
