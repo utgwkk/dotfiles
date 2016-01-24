@@ -16,6 +16,7 @@ NeoBundleFetch 'Shougo/neobundle.vim'
 
 NeoBundle 'Shougo/unite.vim'
 NeoBundle 'Shougo/neomru.vim'
+NeoBundle 'tpope/vim-fugitive'
 NeoBundle 'scrooloose/nerdtree'
 NeoBundle 'tpope/vim-rails'
 NeoBundle 'tpope/vim-endwise'
@@ -50,9 +51,8 @@ if &term =~ "xterm"
 endif
 colorscheme Tomorrow-Night-Bright
 
+" General
 set encoding=utf-8
-set nu
-set cursorline
 set laststatus=2
 set cmdheight=2
 set showmatch
@@ -62,6 +62,13 @@ set history=10000
 set wildmenu wildmode=list:longest,full
 set backspace=indent,eol,start
 set ruler
+set listchars=tab:>\ ,extends:<
+
+" Line
+set nu
+set cursorline
+highlight LineNr ctermfg=darkyellow
+
 
 " File
 set nobackup
@@ -75,6 +82,9 @@ set tabstop=2
 set autoindent
 set expandtab
 set smartindent
+
+" Search
+set incsearch
 
 " IME
 set iminsert=0
@@ -159,3 +169,42 @@ let g:neocomplete#sources#omni#input_patterns.cpp = '[^.[:digit:] *\t]\%(\.\|->\
 " For perlomni.vim setting.
 " https://github.com/c9s/perlomni.vim
 let g:neocomplete#sources#omni#input_patterns.perl = '\h\w*->\h\w*\|\h\w*::'
+
+" For fugitive.vim
+autocmd QuickFixCmdPost *grep* cwindow
+set statusline+=%{fugitive#statusline()}
+
+" https://sites.google.com/site/fudist/Home/vim-nihongo-ban/-vimrc-sample
+""""""""""""""""""""""""""""""
+" 挿入モード時、ステータスラインの色を変更
+""""""""""""""""""""""""""""""
+let g:hi_insert = 'highlight StatusLine guifg=darkblue guibg=darkyellow gui=none ctermfg=blue ctermbg=yellow cterm=none'
+
+if has('syntax')
+  augroup InsertHook
+    autocmd!
+    autocmd InsertEnter * call s:StatusLine('Enter')
+    autocmd InsertLeave * call s:StatusLine('Leave')
+  augroup END
+endif
+
+let s:slhlcmd = ''
+function! s:StatusLine(mode)
+  if a:mode == 'Enter'
+    silent! let s:slhlcmd = 'highlight ' . s:GetHighlight('StatusLine')
+    silent exec g:hi_insert
+  else
+    highlight clear StatusLine
+    silent exec s:slhlcmd
+  endif
+endfunction
+
+function! s:GetHighlight(hi)
+  redir => hl
+  exec 'highlight '.a:hi
+  redir END
+  let hl = substitute(hl, '[\r\n]', '', 'g')
+  let hl = substitute(hl, 'xxx', '', '')
+  return hl
+endfunction
+""""""""""""""""""""""""""""""
