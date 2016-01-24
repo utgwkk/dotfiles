@@ -25,6 +25,7 @@ NeoBundle 'nathanaelkane/vim-indent-guides'
 NeoBundle 'tpope/vim-surround'
 NeoBundle 'vim-scripts/AnsiEsc.vim'
 NeoBundle 'airblade/vim-gitgutter'
+NeoBundle 'Townk/vim-autoclose'
 if has('lua')
   NeoBundle 'Shougo/neocomplete.vim'
 end
