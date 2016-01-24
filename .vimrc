@@ -24,7 +24,9 @@ NeoBundle 'nathanaelkane/vim-indent-guides'
 NeoBundle 'tpope/vim-surround'
 NeoBundle 'vim-scripts/AnsiEsc.vim'
 NeoBundle 'airblade/vim-gitgutter'
-NeoBundle 'Shougo/neocomplete.vim'
+if has('lua')
+  NeoBundle 'Shougo/neocomplete.vim'
+end
 NeoBundle "chriskempson/vim-tomorrow-theme"
 
 call neobundle#end()
