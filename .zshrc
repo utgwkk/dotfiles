@@ -1,0 +1,39 @@
+# vim:set ft=zsh :
+export LANG=ja_JP.UTF-8
+
+autoload -U colors && colors
+autoload -Uz compinit
+compinit
+
+setopt auto_pushd
+setopt pushd_ignore_dups
+
+HISTFILE=~/.zsh_history
+HISTSIZE=1000000
+SAVEHIST=1000000
+
+setopt print_eight_bit
+setopt no_beep
+setopt no_flow_control
+setopt ignore_eof
+setopt interactive_comments
+setopt auto_cd
+setopt share_history
+setopt hist_ignore_all_dups
+setopt extended_glob
+
+alias ls='ls -F --color=auto'
+alias la='ls -a'
+alias ll='ls -l'
+
+setopt PROMPT_SUBST
+source ~/.dotfiles/git-prompt.sh
+PS1="%{${fg[red]}%}[%n@%m]%{${fg[green]}%}\$(__git_ps1)%{${reset_color}%} %~
+% ( ^o^) < "
+
+zstyle ':completion:*:*:git:*' script ~/.git-completion.zsh
+
+GIT_PS1_SHOWDIRTYSTATE=true
+GIT_PS1_SHOWUNTRACKEDFILES=true
+GIT_PS1_SHOWSTASHSTATE=true
+GIT_PS1_SHOWUPSTREAM=auto
