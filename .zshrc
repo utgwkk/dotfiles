@@ -22,6 +22,7 @@ setopt share_history
 setopt hist_ignore_all_dups
 setopt extended_glob
 
+alias l='ls'
 alias ls='ls -F --color=auto'
 alias la='ls -a'
 alias ll='ls -l'
@@ -31,7 +32,7 @@ source ~/.dotfiles/git-prompt.sh
 PS1="%{${fg[red]}%}[%n@%m]%{${fg[green]}%}\$(__git_ps1)%{${reset_color}%} %~
 % ( ^o^) < "
 
-zstyle ':completion:*:*:git:*' script ~/.git-completion.zsh
+zstyle ':completion:*:*:git:*' script ~/.dotfiles/git-completion.zsh
 
 GIT_PS1_SHOWDIRTYSTATE=true
 GIT_PS1_SHOWUNTRACKEDFILES=true
