@@ -26,6 +26,7 @@ NeoBundle 'tpope/vim-surround'
 NeoBundle 'vim-scripts/AnsiEsc.vim'
 NeoBundle 'airblade/vim-gitgutter'
 NeoBundle 'Townk/vim-autoclose'
+NeoBundle 'vim-scripts/vim-auto-save'
 if has('lua')
   NeoBundle 'Shougo/neocomplete.vim'
 end
@@ -41,6 +42,9 @@ NeoBundle 'Shougo/vimproc', {
 NeoBundle "chriskempson/vim-tomorrow-theme"
 
 call neobundle#end()
+
+" auto save
+let g:auto_save = 1
 
 " vimを立ち上げたときに、自動的にvim-indent-guidesをオンにする
 let g:indent_guides_enable_on_vim_startup = 1
