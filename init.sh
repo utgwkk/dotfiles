@@ -1,16 +1,6 @@
 #!/bin/sh
 
-sudo apt-get update
-sudo apt-get upgrade -y
-
-if ! type git >/dev/null 2>&1; then
-  echo "Installing git."
-  sudo apt-get install git -y
-else
-  echo "git is already installed."
-fi
-
-if [ ! -d ~/dotfiles ]; then
+if [ ! -d ~/.dotfiles ]; then
   echo "Setting dotfiles."
   git clone https://github.com/utgw/dotfiles.git ~/.dotfiles
   cd ~/.dotfiles
