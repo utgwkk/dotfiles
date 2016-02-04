@@ -39,4 +39,4 @@ GIT_PS1_SHOWUNTRACKEDFILES=true
 GIT_PS1_SHOWSTASHSTATE=true
 GIT_PS1_SHOWUPSTREAM=auto
 
-source .zsh_profile
+source ~/.zsh_profile
