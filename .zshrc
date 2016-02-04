@@ -26,6 +26,9 @@ alias l='ls'
 alias ls='ls -F --color=auto'
 alias la='ls -a'
 alias ll='ls -l'
+alias C='g++ -std=c++11 '
+alias A='./a.out < in.txt'
+alias vimrc='vim ~/.vimrc'
 
 setopt PROMPT_SUBST
 source ~/.dotfiles/git-prompt.sh
