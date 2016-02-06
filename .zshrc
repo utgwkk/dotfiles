@@ -1,5 +1,6 @@
 # vim:set ft=zsh :
 export LANG=ja_JP.UTF-8
+export LANGUAGE=$LANG
 
 autoload -U colors && colors
 autoload -Uz compinit
@@ -26,9 +27,11 @@ alias l='ls'
 alias ls='ls -F --color=auto'
 alias la='ls -a'
 alias ll='ls -l'
+alias grep='grep --color=auto'
 alias C='g++ -std=c++11 '
 alias A='./a.out < in.txt'
 alias vimrc='vim ~/.vimrc'
+alias rails='bin/rails'
 
 setopt PROMPT_SUBST
 source ~/.dotfiles/git-prompt.sh
