@@ -40,7 +40,7 @@ NeoBundle 'Shougo/vimproc', {
   \    },
   \ }
 
-NeoBundle "chriskempson/vim-tomorrow-theme"
+NeoBundle 'altercation/vim-colors-solarized'
 
 call neobundle#end()
 
@@ -64,7 +64,6 @@ if &term =~ "xterm"
     let &t_Sb = "\<Esc>[4%dm"
   endif
 endif
-colorscheme Tomorrow-Night-Bright
 
 " General
 set encoding=utf-8
@@ -106,6 +105,9 @@ set iminsert=0
 set imsearch=-1
 
 syntax on
+set background=dark
+colorscheme solarized
+
 
 " for Python
 autocmd FileType python setl shiftwidth=4 softtabstop=4 tabstop=4
