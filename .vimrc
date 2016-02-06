@@ -27,6 +27,7 @@ NeoBundle 'vim-scripts/AnsiEsc.vim'
 NeoBundle 'airblade/vim-gitgutter'
 NeoBundle 'Townk/vim-autoclose'
 NeoBundle 'vim-scripts/vim-auto-save'
+NeoBundle 'kchmck/vim-coffee-script'
 if has('lua')
   NeoBundle 'Shougo/neocomplete.vim'
 end
@@ -109,6 +110,9 @@ syntax on
 " for Python
 autocmd FileType python setl shiftwidth=4 softtabstop=4 tabstop=4
 autocmd FileType python setl autoindent smartindent cinwords=if,elif,else,for,while,try,except,finally,def,class,with
+
+" for CoffeeScript
+autocmd BufRead,BufNewFile,BufReadPre *.coffee   set filetype=coffee
 
 " Neocomplete setting
 " from https://github.com/Shougo/neocomplete.vim
