@@ -1,6 +1,7 @@
 # vim:set ft=zsh :
 export LANG=ja_JP.UTF-8
 export LANGUAGE=$LANG
+export DISPLAY=:99.0
 
 autoload -U colors && colors
 autoload -Uz compinit
@@ -32,11 +33,12 @@ alias C='g++ -std=c++11 '
 alias A='./a.out < in.txt'
 alias vimrc='vim ~/.vimrc'
 alias rails='bin/rails'
+alias xvfb='Xvfb :99 -screen 0 1024x768x24 > /dev/null 2>&1 &'
 
 setopt PROMPT_SUBST
 source ~/.dotfiles/git-prompt.sh
-PS1="%{${fg[red]}%}[%n@%m]%{${fg[green]}%}\$(__git_ps1)%{${reset_color}%} %~
-% ( ^o^) < "
+PS1="%{${fg[red]}%}[%n@%m]%{${fg[yellow]}%}\$(__git_ps1)%{${reset_color}%} %~
+% %{${fg[green]}%}%%%{${reset_color}%} "
 
 zstyle ':completion:*:*:git:*' script ~/.dotfiles/git-completion.zsh
 
