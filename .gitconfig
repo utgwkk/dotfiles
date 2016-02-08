@@ -13,9 +13,11 @@
   excludesfile = ~/.gitignore.global
 [alias]
   co = checkout
-  ci = commit
+  cm = commit
   st = status
+  sta = stash
   br = branch
+  bl = blame
   pm = push origin master
   hist = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
   type = cat-file -t
