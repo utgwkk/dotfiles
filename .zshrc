@@ -24,18 +24,6 @@ setopt share_history
 setopt hist_ignore_all_dups
 setopt extended_glob
 
-alias l='ls'
-alias ls='ls -F --color=auto'
-alias la='ls -a'
-alias ll='ls -l'
-alias grep='grep --color=auto'
-alias C='g++ -std=c++11 '
-alias A='./a.out < in.txt'
-alias v='vim'
-alias vimrc='vim ~/.vimrc'
-alias rails='bin/rails'
-alias xvfb='Xvfb :99 -screen 0 1024x768x24 > /dev/null 2>&1 &'
-
 setopt PROMPT_SUBST
 source ~/.dotfiles/git-prompt.sh
 PS1="%{${fg[red]}%}[%n@%m]%{${fg[yellow]}%}\$(__git_ps1)%{${reset_color}%} %~
