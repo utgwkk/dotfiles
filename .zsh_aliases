@@ -8,6 +8,5 @@ alias C='g++ -std=c++11 '
 alias A='./a.out < in.txt'
 alias v='vim -c NERDTreeToggle'
 alias vimrc='vim ~/.vimrc'
-alias rails='bin/rails'
 alias xvfb='Xvfb :99 -screen 0 1024x768x24 > /dev/null 2>&1 &'
 
