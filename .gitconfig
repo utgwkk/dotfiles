@@ -19,6 +19,8 @@
   br = branch
   bl = blame
   pm = push origin master
+  pfm = push --force origin master
   hist = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
   type = cat-file -t
   dump = cat-file -p
+  ln = log --oneline
