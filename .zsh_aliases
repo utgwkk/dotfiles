@@ -8,4 +8,4 @@ alias A='./a.out < in.txt'
 alias v='vim -c NERDTreeToggle'
 alias vimrc='vim ~/.vimrc'
 alias xvfb='Xvfb :99 -screen 0 1024x768x24 > /dev/null 2>&1 &'
-
+alias ssh-key-add='eval `ssh-agent` && ssh-add'
