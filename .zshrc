@@ -38,3 +38,6 @@ GIT_PS1_SHOWUPSTREAM=auto
 
 source ~/.zsh_profile
 source ~/.zsh_aliases
+
+### Added by the Heroku Toolbelt
+export PATH="/usr/local/heroku/bin:$PATH"
