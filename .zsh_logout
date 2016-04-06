@@ -1,2 +1,2 @@
+ssh-add -d
 eval `ssh-agent -k`
-ssh-add -D
