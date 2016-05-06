@@ -96,8 +96,10 @@ set incsearch
 set iminsert=0
 set imsearch=-1
 
+" Appearance
 syntax on
 set background=dark
+colorscheme desert
 
 
 " for Python
