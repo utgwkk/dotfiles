@@ -19,10 +19,8 @@ NeoBundle 'Shougo/neomru.vim'
 NeoBundle 'tpope/vim-fugitive'
 NeoBundle 'scrooloose/nerdtree'
 NeoBundle 'hynek/vim-python-pep8-indent'
-" NeoBundle 'tpope/vim-rails'
 NeoBundle 'tpope/vim-endwise'
 NeoBundle 'tomtom/tcomment_vim'
-NeoBundle 'nathanaelkane/vim-indent-guides'
 NeoBundle 'tpope/vim-surround'
 NeoBundle 'vim-scripts/AnsiEsc.vim'
 NeoBundle 'airblade/vim-gitgutter'
@@ -38,15 +36,11 @@ NeoBundle 'Shougo/vimproc', {
   \    },
   \ }
 
-NeoBundle 'altercation/vim-colors-solarized'
 
 call neobundle#end()
 
 " auto save
 let g:auto_save = 1
-
-" vimを立ち上げたときに、自動的にvim-indent-guidesをオンにする
-let g:indent_guides_enable_on_vim_startup = 1
 
 if &term =~ "xterm"
   " 256 colors
@@ -75,6 +69,7 @@ set wildmenu wildmode=list:longest,full
 set backspace=indent,eol,start
 set ruler
 set listchars=tab:>\ ,extends:<
+set pastetoggle=<F2>
 
 " Line
 set nu
@@ -104,12 +99,14 @@ set imsearch=-1
 
 syntax on
 set background=dark
-colorscheme solarized
 
 
 " for Python
 autocmd FileType python setl shiftwidth=4 softtabstop=4 tabstop=4
 autocmd FileType python setl autoindent smartindent cinwords=if,elif,else,for,while,try,except,finally,def,class,with
+
+" for JavaScript
+autocmd FileType javascript setl shiftwidth=4 softtabstop=4 tabstop=4
 
 " for CoffeeScript
 autocmd BufRead,BufNewFile,BufReadPre *.coffee   set filetype=coffee
