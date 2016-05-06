@@ -26,7 +26,6 @@ NeoBundle 'vim-scripts/AnsiEsc.vim'
 NeoBundle 'airblade/vim-gitgutter'
 NeoBundle 'Townk/vim-autoclose'
 NeoBundle 'vim-scripts/vim-auto-save'
-NeoBundle 'kchmck/vim-coffee-script'
 NeoBundle 'Shougo/vimproc', {
   \ 'build' : {
   \     'windows' : 'make -f make_mingw32.mak',
