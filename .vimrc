@@ -106,9 +106,6 @@ autocmd FileType python setl autoindent smartindent cinwords=if,elif,else,for,wh
 " for JavaScript
 autocmd FileType javascript setl shiftwidth=4 softtabstop=4 tabstop=4
 
-" for CoffeeScript
-autocmd BufRead,BufNewFile,BufReadPre *.coffee   set filetype=coffee
-
 " For fugitive.vim
 autocmd QuickFixCmdPost *grep* cwindow
 set statusline+=%{fugitive#statusline()}
