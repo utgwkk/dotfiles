@@ -11,7 +11,6 @@
   autocrlf = input
   editor = vim
   excludesfile = ~/.gitignore.global
-  commentChar = %
 [alias]
   co = checkout
   cm = commit
