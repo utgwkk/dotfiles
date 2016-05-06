@@ -34,6 +34,7 @@ NeoBundle 'Shougo/vimproc', {
   \    },
   \ }
 
+NeoBundleLazy 'othree/yajs.vim', {'autoload':{'filetypes':['javascript']}}
 
 call neobundle#end()
 
