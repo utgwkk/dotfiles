@@ -10,3 +10,4 @@ alias vimrc='vim ~/.vimrc'
 alias xvfb='daemon -- Xvfb :99 -screen 0 1024x768x24 &'
 alias ssh-key-add='eval `ssh-agent` && ssh-add'
 alias H='head'
+alias CALL="jq '.data.sections[2].data.stages[1].data.activity.data.multipleQuestionSet.data.questionSet[].data.question[].data.distractors[].data | select(.correct).text' "
