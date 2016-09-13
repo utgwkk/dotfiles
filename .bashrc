@@ -59,6 +59,8 @@ export LANG="ja_JP.UTF-8"
 source ~/.dotfiles/git-prompt.sh
 source ~/.dotfiles/git-completion.bash
 
+source ~/.aliases
+
 GIT_PS1_SHOWDIRTYSTATE=true
 GIT_PS1_SHOWUNTRACKEDFILES=true
 GIT_PS1_SHOWSTASHSTATE=true
