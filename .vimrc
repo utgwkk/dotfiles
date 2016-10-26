@@ -101,6 +101,8 @@ syntax on
 set background=dark
 colorscheme desert
 
+" Key binding
+map! <C-g><C-g> <Esc>
 
 " for Python
 autocmd FileType python setl shiftwidth=4 softtabstop=4 tabstop=4
