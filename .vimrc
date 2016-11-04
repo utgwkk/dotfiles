@@ -25,6 +25,7 @@ NeoBundle 'vim-scripts/AnsiEsc.vim'
 NeoBundle 'airblade/vim-gitgutter'
 NeoBundle 'Townk/vim-autoclose'
 NeoBundle 'vim-scripts/vim-auto-save'
+NeoBundle 'itchyny/lightline.vim'
 NeoBundle 'Shougo/vimproc', {
   \ 'build' : {
   \     'windows' : 'make -f make_mingw32.mak',
@@ -113,39 +114,17 @@ autocmd FileType javascript setl shiftwidth=4 softtabstop=4 tabstop=4
 
 " For fugitive.vim
 autocmd QuickFixCmdPost *grep* cwindow
-set statusline+=%{fugitive#statusline()}
 
-" https://sites.google.com/site/fudist/Home/vim-nihongo-ban/-vimrc-sample
-""""""""""""""""""""""""""""""
-" 挿入モード時、ステータスラインの色を変更
-""""""""""""""""""""""""""""""
-let g:hi_insert = 'highlight StatusLine guifg=darkblue guibg=darkyellow gui=none ctermfg=blue ctermbg=yellow cterm=none'
-
-if has('syntax')
-  augroup InsertHook
-    autocmd!
-    autocmd InsertEnter * call s:StatusLine('Enter')
-    autocmd InsertLeave * call s:StatusLine('Leave')
-  augroup END
-endif
-
-let s:slhlcmd = ''
-function! s:StatusLine(mode)
-  if a:mode == 'Enter'
-    silent! let s:slhlcmd = 'highlight ' . s:GetHighlight('StatusLine')
-    silent exec g:hi_insert
-  else
-    highlight clear StatusLine
-    silent exec s:slhlcmd
-  endif
-endfunction
-
-function! s:GetHighlight(hi)
-  redir => hl
-  exec 'highlight '.a:hi
-  redir END
-  let hl = substitute(hl, '[\r\n]', '', 'g')
-  let hl = substitute(hl, 'xxx', '', '')
-  return hl
-endfunction
-""""""""""""""""""""""""""""""
+" lightline
+let g:lightline = {
+\   'active': {
+\     'left': [ [ 'mode', 'paste' ],
+\             [ 'fugitive', 'readonly', 'filename' ] ]
+\   },
+\   'component': {
+\     'fugitive': '%{exists("*fugitive#head")?fugitive#head():""}',
+\   },
+\   'component_visible_condition': {
+\     'fugitive': '(exists("*fugitive#head") && ""!=fugitive#head())',
+\   }
+\ }
