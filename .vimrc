@@ -74,6 +74,7 @@ set cmdheight=2
 set showmatch
 set helpheight=999
 set showcmd
+set noshowmode
 set history=10000
 set wildmenu wildmode=list:longest,full
 set backspace=indent,eol,start
@@ -138,5 +139,7 @@ let g:lightline = {
 \   },
 \   'component_visible_condition': {
 \     'fugitive': '(exists("*fugitive#head") && ""!=fugitive#head())',
-\   }
+\   },
+\   'separator': { 'left': '', 'right': '' },
+\   'subseparator': { 'left': '', 'right': '' }
 \ }
