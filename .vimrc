@@ -1,41 +1,53 @@
-set nocompatible
-filetype off
-filetype plugin indent off
-if has('vim_starting')
-  if !isdirectory(expand("~/.vim/bundle/neobundle.vim/"))
-    echo "install neobundle..."
-    :call system("git clone git://github.com/Shougo/neobundle.vim ~/.vim/bundle/neobundle.vim")
-  endif
-  if !isdirectory(expand("~/.vim/tmp/"))
-    :call mkdir(expand("~/.vim/tmp/"),"p")
-  endif
-  set runtimepath+=~/.vim/bundle/neobundle.vim
+"dein Scripts-----------------------------
+if &compatible
+  set nocompatible               " Be iMproved
 endif
-call neobundle#begin(expand('~/.vim/bundle/'))
-NeoBundleFetch 'Shougo/neobundle.vim'
 
-NeoBundle 'Shougo/unite.vim'
-NeoBundle 'Shougo/neomru.vim'
-NeoBundle 'tpope/vim-fugitive'
-NeoBundle 'scrooloose/nerdtree'
-NeoBundle 'hynek/vim-python-pep8-indent'
-NeoBundle 'tomtom/tcomment_vim'
-NeoBundle 'tpope/vim-surround'
-NeoBundle 'vim-scripts/AnsiEsc.vim'
-NeoBundle 'airblade/vim-gitgutter'
-NeoBundle 'Townk/vim-autoclose'
-NeoBundle 'vim-scripts/vim-auto-save'
-NeoBundle 'itchyny/lightline.vim'
-NeoBundle 'Shougo/vimproc', {
+" Required:
+set runtimepath+=$HOME/.vim/repos/github.com/Shougo/dein.vim
+
+" Required:
+call dein#begin(expand('~/.vim'))
+
+" Let dein manage dein
+" Required:
+call dein#add('Shougo/dein.vim')
+
+" Add or remove your plugins here:
+call dein#add('Shougo/unite.vim')
+call dein#add('Shougo/neomru.vim')
+call dein#add('tpope/vim-fugitive')
+call dein#add('scrooloose/nerdtree')
+call dein#add('hynek/vim-python-pep8-indent')
+call dein#add('tomtom/tcomment_vim')
+call dein#add('tpope/vim-surround')
+call dein#add('vim-scripts/AnsiEsc.vim')
+call dein#add('airblade/vim-gitgutter')
+call dein#add('Townk/vim-autoclose')
+call dein#add('vim-scripts/vim-auto-save')
+call dein#add('itchyny/lightline.vim')
+call dein#add('Shougo/vimproc', {
   \ 'build' : {
   \     'windows' : 'make -f make_mingw32.mak',
   \     'cygwin' : 'make -f make_cygwin.mak',
   \     'mac' : 'make -f make_mac.mak',
   \     'unix' : 'make -f make_unix.mak',
   \    },
-  \ }
+  \ })
 
-call neobundle#end()
+" Required:
+call dein#end()
+
+" Required:
+filetype plugin indent on
+syntax enable
+
+" If you want to install not installed plugins on startup.
+if dein#check_install()
+ call dein#install()
+endif
+
+"End dein Scripts-------------------------
 
 " auto save
 let g:auto_save = 1
