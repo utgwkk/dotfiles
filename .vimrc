@@ -135,7 +135,7 @@ let g:lightline = {
 \             [ 'fugitive', 'readonly', 'filename' ] ]
 \   },
 \   'component': {
-\     'fugitive': '%{exists("*fugitive#head")?fugitive#head():""}',
+\     'fugitive': '%{exists("*fugitive#head")?"ﾄ ".fugitive#head():""}',
 \   },
 \   'component_visible_condition': {
 \     'fugitive': '(exists("*fugitive#head") && ""!=fugitive#head())',
