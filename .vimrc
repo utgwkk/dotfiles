@@ -103,6 +103,8 @@ set background=dark
 colorscheme desert
 
 " Key binding
+noremap j gj
+noremap k gk
 map! <C-g><C-g> <Esc>
 
 " for Python
