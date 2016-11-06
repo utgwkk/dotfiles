@@ -36,6 +36,8 @@ GIT_PS1_SHOWSTASHSTATE=true
 GIT_PS1_SHOWUPSTREAM=auto
 
 source ~/.aliases
+export LESS='-i -M -R -W'
+export PAGER=less
 
 export PATH="$HOME/.rbenv/bin:$PATH"
 eval "$(rbenv init -)"
