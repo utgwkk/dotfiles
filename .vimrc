@@ -107,6 +107,9 @@ set incsearch
 set iminsert=0
 set imsearch=-1
 
+" Clipboard
+set clipboard=unnamedplus
+
 " Appearance
 syntax on
 set background=dark
