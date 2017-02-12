@@ -50,7 +50,9 @@ endif
 "End dein Scripts-------------------------
 
 " auto save
-let g:auto_save = 1
+if exists("*fugitive#head")
+  let g:auto_save = 1
+endif
 
 if &term =~ "xterm"
   " 256 colors
