@@ -120,6 +120,7 @@ noremap j gj
 noremap k gk
 map! <C-g><C-g> <Esc>
 noremap <C-w><C-]> <C-w>}
+nmap <C-w><C-w> :NERDTreeToggle<CR>
 
 " for Python
 autocmd FileType python setl shiftwidth=4 softtabstop=4 tabstop=4
