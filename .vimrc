@@ -119,6 +119,7 @@ colorscheme desert
 noremap j gj
 noremap k gk
 map! <C-g><C-g> <Esc>
+noremap <C-w><C-]> <C-w>}
 
 " for Python
 autocmd FileType python setl shiftwidth=4 softtabstop=4 tabstop=4
