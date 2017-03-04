@@ -48,4 +48,5 @@ else
 fi
 
 source ~/.zprofile
+source ~/.zshrc
 echo "Finished."
