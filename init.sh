@@ -30,6 +30,13 @@ else
   echo "rbenv is already installed."
 fi
 
+if ! type goenv >/dev/null 2>&1; then
+  echo "Installing goenv."
+  git clone https://github.com/wfarr/goenv.git ~/.goenv
+else
+  echo "goenv is already installed."
+fi
+
 # It doesn't work...
 #if ! type nvm >/dev/null 2>&1; then
 if [ ! -d ~/.nvm ]; then
