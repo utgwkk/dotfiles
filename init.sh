@@ -47,5 +47,5 @@ else
   echo "nvm is already installed."
 fi
 
-source ~/.bash_profile
+source ~/.zprofile
 echo "Finished."
