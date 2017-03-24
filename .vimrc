@@ -24,7 +24,7 @@ call dein#add('tpope/vim-surround')
 call dein#add('vim-scripts/AnsiEsc.vim')
 call dein#add('airblade/vim-gitgutter')
 call dein#add('Townk/vim-autoclose')
-call dein#add('vim-scripts/vim-auto-save')
+call dein#add('907th/vim-auto-save')
 call dein#add('itchyny/lightline.vim')
 call dein#add('Shougo/vimproc', {
   \ 'build' : {
