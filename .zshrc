@@ -51,7 +51,7 @@ if [[ -s ~/.nvm/nvm.sh ]];
   then source ~/.nvm/nvm.sh
 fi
 
-export PATH=$HOME/local/bin:$PATH
+export PATH=/usr/local/bin:$HOME/local/bin:$PATH
 
 # OPAM configuration
 . ~/.opam/opam-init/init.zsh > /dev/null 2> /dev/null || true

@@ -15,3 +15,7 @@ if [ $SHELL = "/bin/zsh" ]; then
   alias -g T='| tail'
   alias -g G='| grep'
 fi
+
+if [ "`uname`" = "Darwin" ]; then
+  alias ls='ls -FG'
+fi
