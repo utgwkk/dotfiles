@@ -35,6 +35,10 @@ call dein#add('Shougo/vimproc', {
   \    },
   \ })
 
+if has('mac')
+  call dein#add('tyru/skk.vim')
+endif
+
 " Required:
 call dein#end()
 
@@ -111,7 +115,7 @@ set iminsert=0
 set imsearch=-1
 
 " Clipboard
-set clipboard=unnamedplus
+set clipboard=unnamed,unnamedplus
 
 " Appearance
 syntax on
