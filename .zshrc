@@ -29,6 +29,7 @@ source ~/.dotfiles/git-prompt.sh
 PS1="%{${fg[red]}%}[%n@%m]%{${fg[yellow]}%}\$(__git_ps1)%{${reset_color}%} %~
 % %{${fg[green]}%}%%%{${reset_color}%} "
 
+zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}'
 zstyle ':completion:*:*:git:*' script ~/.dotfiles/git-completion.zsh
 
 GIT_PS1_SHOWDIRTYSTATE=true
