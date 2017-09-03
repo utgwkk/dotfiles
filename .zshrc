@@ -47,16 +47,6 @@ export LESS_TERMCAP_so=$'\E[00;47;30m'   # Begins standout-mode.
 export LESS_TERMCAP_ue=$'\E[0m'          # Ends underline.
 export LESS_TERMCAP_us=$'\E[01;32m'      # Begins underline.
 
-export PATH="$HOME/.rbenv/bin:$PATH"
-eval "$(rbenv init -)"
-
-export PYENV_ROOT="$HOME/.pyenv"
-export PATH="$PYENV_ROOT/bin:$PATH"
-eval "$(pyenv init -)"
-
-export PATH="$HOME/.goenv/bin:$PATH"
-eval "$(goenv init -)"
-
 if [[ -s ~/.nvm/nvm.sh ]];
   then source ~/.nvm/nvm.sh
 fi
@@ -65,3 +55,11 @@ export PATH=$HOME/local/bin:$PATH
 
 # OPAM configuration
 . ~/.opam/opam-init/init.zsh > /dev/null 2> /dev/null || true
+
+# added by travis gem
+[ -f /home/utgwkk/.travis/travis.sh ] && source /home/utgwkk/.travis/travis.sh
+
+if [ -z "$SSH_AUTH_SOCK" ] ; then
+  eval `ssh-agent -s`
+  ssh-add
+fi
