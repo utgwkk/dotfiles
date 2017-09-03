@@ -23,8 +23,8 @@ call dein#add('tomtom/tcomment_vim')
 call dein#add('tpope/vim-surround')
 call dein#add('vim-scripts/AnsiEsc.vim')
 call dein#add('airblade/vim-gitgutter')
-call dein#add('Townk/vim-autoclose')
-call dein#add('vim-scripts/vim-auto-save')
+call dein#add('Raimondi/delimitMate')
+call dein#add('907th/vim-auto-save')
 call dein#add('itchyny/lightline.vim')
 call dein#add('Shougo/vimproc', {
   \ 'build' : {
@@ -50,9 +50,10 @@ endif
 "End dein Scripts-------------------------
 
 " auto save
-if exists("*fugitive#head")
-  let g:auto_save = 1
-endif
+augroup autosave
+  autocmd!
+  autocmd BufEnter * let g:auto_save = (exists("*fugitive#head")&&""!=fugitive#head())
+augroup END
 
 if &term =~ "xterm"
   " 256 colors

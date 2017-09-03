@@ -24,3 +24,5 @@
   type = cat-file -t
   dump = cat-file -p
   ln = log --oneline
+[include]
+	path = ~/.gitconfig.local
