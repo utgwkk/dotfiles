@@ -147,3 +147,7 @@ let g:lightline = {
 \     'fugitive': '(exists("*fugitive#head") && ""!=fugitive#head())',
 \   }
 \ }
+
+if filereadable(expand('~/.vim/local.vim'))
+  source ~/.vim/local.vim
+endif
