@@ -1,11 +1,19 @@
-export PATH="$HOME/.rbenv/bin:$PATH"
-eval "$(rbenv init -)"
+if [ -d "$HOME/.rbenv" ]; then
+  export PATH="$HOME/.rbenv/bin:$PATH"
+  eval "$(rbenv init -)"
+fi
 
-export PYENV_ROOT="$HOME/.pyenv"
-export PATH="$PYENV_ROOT/bin:$PATH"
-eval "$(pyenv init -)"
+if [ -d "$HOME/.pyenv" ]; then
+  export PYENV_ROOT="$HOME/.pyenv"
+  export PATH="$PYENV_ROOT/bin:$PATH"
+  eval "$(pyenv init -)"
+fi
 
-export PATH="$HOME/.goenv/bin:$PATH"
-eval "$(goenv init -)"
+if [ -d "$HOME/.goenv" ]; then
+  export PATH="$HOME/.goenv/bin:$PATH"
+  eval "$(goenv init -)"
+fi
 
-export PATH="$HOME/.cargo/bin:$PATH"
+if [ -d "$HOME/.cargo" ]; then
+  export PATH="$HOME/.cargo/bin:$PATH"
+fi
