@@ -25,4 +25,4 @@
   dump = cat-file -p
   ln = log --oneline
 [include]
-	path = ~/.gitconfig.local
+  path = ~/.gitconfig.local
