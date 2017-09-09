@@ -143,13 +143,15 @@ autocmd QuickFixCmdPost *grep* cwindow
 let g:lightline = {
 \   'active': {
 \     'left': [ [ 'mode', 'paste' ],
-\             [ 'fugitive', 'readonly', 'filename' ] ]
+\             [ 'skk', 'fugitive', 'readonly', 'filename' ] ]
 \   },
 \   'component': {
 \     'fugitive': '%{exists("*fugitive#head")?fugitive#head():""}',
+\     'skk': '%{SkkGetModeStr()}',
 \   },
 \   'component_visible_condition': {
 \     'fugitive': '(exists("*fugitive#head") && ""!=fugitive#head())',
+\     'skk': '1'
 \   }
 \ }
 
