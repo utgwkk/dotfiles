@@ -7,7 +7,7 @@ if [ ! -d ~/.dotfiles ]; then
   wget https://raw.githubusercontent.com/git/git/master/contrib/completion/git-completion.bash
   wget https://raw.githubusercontent.com/git/git/master/contrib/completion/git-prompt.sh
   cd ~/
-  for f in `find ~/.dotfiles -maxdepth 1 -name ".*" -type f`; do
+  for f in `find ~/.dotfiles/files -maxdepth 1 -name ".*" -type f`; do
     ln -sf $f
   done
 else
