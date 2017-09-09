@@ -26,12 +26,14 @@ end
   end
 end
 
+directory "#{ENV['HOME']}/local/etc"
+
 download "git-prompt" do
   url "https://raw.githubusercontent.com/git/git/master/contrib/completion/git-prompt.sh"
-  to File.join Dir.pwd, "git-prompt.sh"
+  to File.join ENV['HOME'], "local", "etc", "git-prompt.sh"
 end
 
 download "git-completion" do
   url "https://raw.githubusercontent.com/git/git/master/contrib/completion/git-completion.bash"
-  to File.join Dir.pwd, "git-completion.bash"
+  to File.join ENV['HOME'], "local", "etc", "git-completion.bash"
 end

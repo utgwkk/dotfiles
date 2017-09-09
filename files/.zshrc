@@ -25,12 +25,12 @@ setopt hist_ignore_all_dups
 setopt extended_glob
 
 setopt PROMPT_SUBST
-source ~/.dotfiles/git-prompt.sh
+source ~/local/etc/git-prompt.sh
 PS1="%{${fg[red]}%}[%n@%m]%{${fg[yellow]}%}\$(__git_ps1)%{${reset_color}%} %~
 % %{${fg[green]}%}%%%{${reset_color}%} "
 
 zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}'
-zstyle ':completion:*:*:git:*' script ~/.dotfiles/git-completion.zsh
+zstyle ':completion:*:*:git:*' script ~/local/etc/git-completion.zsh
 
 GIT_PS1_SHOWDIRTYSTATE=true
 GIT_PS1_SHOWUNTRACKEDFILES=true
