@@ -1,0 +1,11 @@
+- hosts: all
+  tasks:
+    - name: create ~/local/etc if not exist
+      file: path=~/local/etc state=directory mode=0755
+    - name: download scripts
+      get_url:
+        url: "{{ item }}"
+        dest: "~/local/etc/{{ item | basename }}"
+      with_items:
+        - https://raw.githubusercontent.com/git/git/master/contrib/completion/git-prompt.sh
+        - https://raw.githubusercontent.com/git/git/master/contrib/completion/git-completion.bash

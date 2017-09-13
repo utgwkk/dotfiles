@@ -2,7 +2,6 @@
 ## apply
 
 ```console
-$ itamae local init.rb
+$ pip install ansible
+$ ansible-playbook -i ./hosts playbooks/*.yml
 ```
-
-Note that only `itamae local` is supported (because of home directory problem).

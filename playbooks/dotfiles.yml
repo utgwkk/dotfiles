@@ -1,0 +1,15 @@
+- hosts: all
+  tasks:
+    - name: copy dotfiles
+      copy:
+        src: "../files/{{ item }}"
+        dest: "~/{{ item }}"
+      with_items:
+        - ".aliases"
+        - ".zshrc"
+        - ".zprofile"
+        - ".zlogout"
+        - ".gitconfig"
+        - ".gitignore.global"
+        - ".vimrc"
+        - ".tmux.conf"
