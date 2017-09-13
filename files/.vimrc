@@ -35,10 +35,6 @@ call dein#add('Shougo/vimproc', {
   \    },
   \ })
 
-if has('mac')
-  call dein#add('tyru/skk.vim')
-endif
-
 " Required:
 call dein#end()
 
