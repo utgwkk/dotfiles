@@ -1,7 +1,4 @@
 # vim:set ft=zsh :
-export LANG=ja_JP.UTF-8
-export LANGUAGE=$LANG
-
 autoload -U colors && colors
 autoload -Uz compinit
 compinit
