@@ -45,10 +45,6 @@ export LESS_TERMCAP_so=$'\E[00;47;30m'   # Begins standout-mode.
 export LESS_TERMCAP_ue=$'\E[0m'          # Ends underline.
 export LESS_TERMCAP_us=$'\E[01;32m'      # Begins underline.
 
-if [[ -s ~/.nvm/nvm.sh ]];
-  then source ~/.nvm/nvm.sh
-fi
-
 export PATH=/usr/local/bin:$HOME/local/bin:$PATH
 
 # OPAM configuration
