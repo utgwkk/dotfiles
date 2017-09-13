@@ -34,6 +34,10 @@ call dein#add('Shougo/vimproc', {
   \     'unix' : 'make -f make_unix.mak',
   \    },
   \ })
+" Add local plugins
+if filereadable(expand('~/.vim/local_plugins.vim'))
+  source ~/.vim/local_plugins.vim
+endif
 
 " Required:
 call dein#end()
