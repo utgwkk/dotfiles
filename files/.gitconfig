@@ -24,5 +24,7 @@
   type = cat-file -t
   dump = cat-file -p
   ln = log --oneline
+[rebase]
+  autosquash = true
 [include]
   path = ~/.gitconfig.local
