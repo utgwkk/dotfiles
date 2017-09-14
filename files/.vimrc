@@ -35,8 +35,8 @@ call dein#add('Shougo/vimproc', {
   \    },
   \ })
 " Add local plugins
-if filereadable(expand('~/.vim/local_plugins.vim'))
-  source ~/.vim/local_plugins.vim
+if filereadable(expand('~/.vim/local/plugins.vim'))
+  source ~/.vim/local/plugins.vim
 endif
 
 " Required:
@@ -153,6 +153,6 @@ let g:lightline = {
 \   }
 \ }
 
-if filereadable(expand('~/.vim/local.vim'))
-  source ~/.vim/local.vim
+if filereadable(expand('~/.vim/local/init.vim'))
+  source ~/.vim/local/init.vim
 endif
