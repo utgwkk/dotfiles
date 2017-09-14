@@ -34,6 +34,7 @@ call dein#add('Shougo/vimproc', {
   \     'unix' : 'make -f make_unix.mak',
   \    },
   \ })
+
 " Add local plugins
 if filereadable(expand('~/.vim/local/plugins.vim'))
   source ~/.vim/local/plugins.vim
@@ -92,7 +93,6 @@ set pastetoggle=<F2>
 set nu
 set cursorline
 highlight LineNr ctermfg=darkyellow
-
 
 " File
 set nobackup
