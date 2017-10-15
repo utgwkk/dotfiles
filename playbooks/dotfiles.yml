@@ -6,9 +6,6 @@
         dest: "~/{{ item }}"
       with_items:
         - ".aliases"
-        - ".zshrc"
-        - ".zprofile"
-        - ".zlogout"
         - ".gitconfig"
         - ".gitignore.global"
         - ".vimrc"
