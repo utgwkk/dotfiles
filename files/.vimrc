@@ -3,6 +3,14 @@ if &compatible
   set nocompatible               " Be iMproved
 endif
 
+let dein_dir = expand('~/.vim/repos/github.com/Shougo')
+
+if !isdirectory(dein_dir)
+  echo 'installing dein.vim ...'
+  call system('mkdir -p ' . dein_dir)
+  call system('git clone https://github.com/Shougo/dein.vim ' . dein_dir . '/dein.vim')
+endif
+
 " Required:
 set runtimepath+=$HOME/.vim/repos/github.com/Shougo/dein.vim
 
