@@ -7,7 +7,7 @@ let dein_dir = expand('~/.vim/repos/github.com/Shougo')
 
 if !isdirectory(dein_dir)
   echo 'installing dein.vim ...'
-  call system('mkdir -p ' . dein_dir)
+  call mkdir(dein_dir, 'p', '0755')
   call system('git clone https://github.com/Shougo/dein.vim ' . dein_dir . '/dein.vim')
 endif
 
