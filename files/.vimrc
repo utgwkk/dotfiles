@@ -22,26 +22,13 @@ call dein#begin(expand('~/.vim'))
 call dein#add('Shougo/dein.vim')
 
 " Add or remove your plugins here:
-call dein#add('Shougo/unite.vim')
-call dein#add('Shougo/neomru.vim')
 call dein#add('tpope/vim-fugitive')
-call dein#add('scrooloose/nerdtree')
-call dein#add('hynek/vim-python-pep8-indent')
 call dein#add('tomtom/tcomment_vim')
 call dein#add('tpope/vim-surround')
 call dein#add('vim-scripts/AnsiEsc.vim')
 call dein#add('airblade/vim-gitgutter')
 call dein#add('Raimondi/delimitMate')
-call dein#add('907th/vim-auto-save')
 call dein#add('itchyny/lightline.vim')
-call dein#add('Shougo/vimproc', {
-  \ 'build' : {
-  \     'windows' : 'make -f make_mingw32.mak',
-  \     'cygwin' : 'make -f make_cygwin.mak',
-  \     'mac' : 'make -f make_mac.mak',
-  \     'unix' : 'make -f make_unix.mak',
-  \    },
-  \ })
 
 " Add local plugins
 if filereadable(expand('~/.vim/local/plugins.vim'))
@@ -135,7 +122,6 @@ noremap j gj
 noremap k gk
 map! <C-g><C-g> <Esc>
 noremap <C-w><C-]> <C-w>}
-nmap <C-w><C-w> :NERDTreeToggle<CR>
 
 " for Python
 autocmd FileType python setl shiftwidth=4 softtabstop=4 tabstop=4
