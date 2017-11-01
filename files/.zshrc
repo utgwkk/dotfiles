@@ -52,8 +52,3 @@ export PATH=/usr/local/bin:$HOME/local/bin:$PATH
 
 # added by travis gem
 [ -f /home/utgwkk/.travis/travis.sh ] && source /home/utgwkk/.travis/travis.sh
-
-if [ -z "$SSH_AUTH_SOCK" ] ; then
-  eval `ssh-agent -s`
-  ssh-add
-fi
