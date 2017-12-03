@@ -95,7 +95,7 @@ set wildmenu wildmode=list:longest,full
 set backspace=indent,eol,start
 set ruler
 set listchars=tab:>\ ,extends:<
-set pastetoggle=<F2>
+set pastetoggle=<C-k>
 
 " Line
 set nu
