@@ -8,6 +8,7 @@ alias l='ls'
 alias la='ls -a'
 alias ll='ls -l'
 alias ls='ls -F --color=auto'
+alias rl='rlwrap'
 alias CALL="jq '.data.sections[2].data.stages[1].data.activity.data.multipleQuestionSet.data.questionSet[].data.question[].data.distractors[].data | select(.correct).text' "
 
 if [ $SHELL = "/bin/zsh" ]; then
