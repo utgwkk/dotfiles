@@ -11,7 +11,7 @@ alias ls='ls -F --color=auto'
 alias rl='rlwrap'
 alias CALL="jq '.data.sections[2].data.stages[1].data.activity.data.multipleQuestionSet.data.questionSet[].data.question[].data.distractors[].data | select(.correct).text' "
 
-if [ $SHELL = "/bin/zsh" ]; then
+if [[ "$0" = *zsh ]]; then
   alias -g H='| head'
   alias -g T='| tail'
   alias -g G='| grep'
