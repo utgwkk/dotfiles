@@ -122,6 +122,10 @@ set incsearch
 set iminsert=0
 set imsearch=-1
 
+" Split
+set splitright
+set splitbelow
+
 " Clipboard
 set clipboard=unnamed,unnamedplus
 
