@@ -23,7 +23,7 @@ setopt extended_glob
 
 setopt PROMPT_SUBST
 source ~/local/etc/git-prompt.sh
-PS1="%{${fg[red]}%}[%n@%m]%{${fg[yellow]}%}\$(__git_ps1)%{${reset_color}%} %~
+PS1="%{${fg[red]}%}[%n@%m] %{${fg[cyan]}%}\$(date +%H:%M:%S)%{${fg[yellow]}%}\$(__git_ps1)%{${reset_color}%} %~
 % %{${fg[green]}%}%%%{${reset_color}%} "
 
 zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}'
