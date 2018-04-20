@@ -27,3 +27,5 @@ if [[ -s ~/.nvm/nvm.sh ]];
   then source ~/.nvm/nvm.sh
 fi
 
+# apply local .zproile
+[ -f ~/.zproile.local ] && source ~/.zproile.local

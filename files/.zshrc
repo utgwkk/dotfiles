@@ -52,3 +52,6 @@ export PATH=$PATH:/usr/local/bin:$HOME/local/bin
 
 # added by travis gem
 [ -f /home/utgwkk/.travis/travis.sh ] && source /home/utgwkk/.travis/travis.sh
+
+# apply local .zshrc
+[ -f ~/.zshrc.local ] && source ~/.zshrc.local
