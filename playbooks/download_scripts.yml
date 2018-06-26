@@ -8,4 +8,4 @@
         dest: "~/local/etc/{{ item | basename }}"
       with_items:
         - https://raw.githubusercontent.com/git/git/master/contrib/completion/git-prompt.sh
-        - https://raw.githubusercontent.com/git/git/master/contrib/completion/git-completion.bash
+        - https://raw.githubusercontent.com/git/git/master/contrib/completion/git-completion.zsh
