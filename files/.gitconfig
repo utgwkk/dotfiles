@@ -16,6 +16,7 @@
   br = branch
   cm = commit
   co = checkout
+  diffs = diff --staged
   dump = cat-file -p
   hist = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
   ln = log --oneline
