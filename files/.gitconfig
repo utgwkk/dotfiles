@@ -12,18 +12,18 @@
   editor = vim
   excludesfile = ~/.gitignore.global
 [alias]
-  co = checkout
+  bl = blame
+  br = branch
   cm = commit
+  co = checkout
+  dump = cat-file -p
+  hist = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
+  ln = log --oneline
+  pfm = push --force origin master
+  pm = push origin master
   st = status
   sta = stash
-  br = branch
-  bl = blame
-  pm = push origin master
-  pfm = push --force origin master
-  hist = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
   type = cat-file -t
-  dump = cat-file -p
-  ln = log --oneline
 [rebase]
   autosquash = true
 [include]
