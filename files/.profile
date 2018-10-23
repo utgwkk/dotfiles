@@ -26,3 +26,9 @@ fi
 if [[ -s ~/.nvm/nvm.sh ]];
   then source ~/.nvm/nvm.sh
 fi
+
+# OPAM configuration
+. ~/.opam/opam-init/init.zsh > /dev/null 2> /dev/null || true
+
+# added by travis gem
+[ -f /home/utgwkk/.travis/travis.sh ] && source /home/utgwkk/.travis/travis.sh

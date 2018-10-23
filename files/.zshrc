@@ -47,11 +47,5 @@ export LESS_TERMCAP_us=$'\E[01;32m'      # Begins underline.
 
 export PATH=$PATH:/usr/local/bin:$HOME/local/bin
 
-# OPAM configuration
-. ~/.opam/opam-init/init.zsh > /dev/null 2> /dev/null || true
-
-# added by travis gem
-[ -f /home/utgwkk/.travis/travis.sh ] && source /home/utgwkk/.travis/travis.sh
-
 # apply local .zshrc
 [ -f ~/.zshrc.local ] && source ~/.zshrc.local
