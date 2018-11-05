@@ -48,4 +48,4 @@ export LESS_TERMCAP_us=$'\E[01;32m'      # Begins underline.
 export PATH=$PATH:/usr/local/bin:$HOME/local/bin
 
 # apply local .zshrc
-[ -f ~/.zshrc.local ] && source ~/.zshrc.local
+[ -f ~/.zshrc.local ] && source ~/.zshrc.local || true
