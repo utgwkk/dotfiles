@@ -27,7 +27,6 @@ PS1="%{${fg[green]}%}[%n@%m]%{${fg[red]}%} %(?..[%?] )%{${fg[cyan]}%}\$(date +%H
 % %{${fg[red]}%}%%%{${reset_color}%} "
 
 zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}'
-zstyle ':completion:*:*:git:*' script ~/local/etc/git-completion.zsh
 
 GIT_PS1_SHOWDIRTYSTATE=true
 GIT_PS1_SHOWUNTRACKEDFILES=true
