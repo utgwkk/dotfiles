@@ -9,6 +9,7 @@ alias la='ls -A'
 alias ll='ls -l'
 alias ls='ls -F --color=auto'
 alias rl='rlwrap'
+alias gf='fg'
 
 if [[ "$0" = *zsh ]]; then
   alias -g H='| head'
