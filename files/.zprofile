@@ -1,4 +1,6 @@
 source ~/.profile
 
 # apply local .zproile
-[ -f ~/.zproile.local ] && source ~/.zproile.local
+if [ -f ~/.zproile.local ]; then
+  source ~/.zproile.local
+fi
