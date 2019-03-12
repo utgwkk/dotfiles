@@ -31,4 +31,6 @@ fi
 . ~/.opam/opam-init/init.zsh > /dev/null 2> /dev/null || true
 
 # added by travis gem
-[ -f /home/utgwkk/.travis/travis.sh ] && source /home/utgwkk/.travis/travis.sh
+if [ -f /home/utgwkk/.travis/travis.sh ]; then
+  source /home/utgwkk/.travis/travis.sh
+fi
