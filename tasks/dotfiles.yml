@@ -1,0 +1,15 @@
+- name: copy dotfiles
+  copy:
+    src: "../files/{{ item }}"
+    dest: "~/{{ item }}"
+  with_items:
+    - ".aliases"
+    - ".profile"
+    - ".zshrc"
+    - ".zprofile"
+    - ".zlogin"
+    - ".zlogout"
+    - ".gitconfig"
+    - ".gitignore.global"
+    - ".vimrc"
+    - ".tmux.conf"

@@ -1,0 +1,7 @@
+- hosts: all
+  tasks:
+    - name: include playbooks
+      include_tasks: "tasks/{{ item }}"
+      with_items:
+        - dotfiles.yml
+        - download_scripts.yml
