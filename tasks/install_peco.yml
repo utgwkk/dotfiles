@@ -6,6 +6,7 @@
     ls ~/local/bin/peco
   register: check_result
   check_mode: no
+  ignore_errors: yes
 
 - name: install peco
   shell:
