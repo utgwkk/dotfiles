@@ -46,6 +46,17 @@ export LESS_TERMCAP_us=$'\E[01;32m'      # Begins underline.
 
 export PATH=$PATH:/usr/local/bin:$HOME/local/bin
 
+if which peco > /dev/null 2>&1; then
+  function peco-history-selection() {
+    BUFFER=`history -n 1 | tac | awk '!a[$0]++' | peco`
+    CURSOR=$#BUFFER
+    zle reset-prompt
+  }
+
+  zle -N peco-history-selection
+  bindkey '^R' peco-history-selection
+fi
+
 # apply local .zshrc
 if [ -f ~/.zshrc.local ]; then
   source ~/.zshrc.local
