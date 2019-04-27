@@ -1,0 +1,19 @@
+- name: create ~/local/bin if not exist
+  file: path=~/local/bin state=directory mode=0755
+
+- name: check peco executable existence
+  shell:
+    ls ~/local/bin/peco
+  register: check_result
+  check_mode: no
+
+- name: install peco
+  shell:
+    command_warning=False
+    LATEST_ARCHIVE_URL=`curl -sL https://api.github.com/repos/peco/peco/releases | grep browser_download_url | grep peco_linux_amd64 | head -n1 | cut -d '"' -f 4`;
+    TEMPDIR=`mktemp -d`;
+    cd $TEMPDIR;
+    curl -sL $LATEST_ARCHIVE_URL -o $TEMPDIR/peco_archive.tar.gz;
+    tar xvf $TEMPDIR/peco_archive.tar.gz;
+    cp $TEMPDIR/peco_linux_amd64/peco ~/local/bin
+  when: check_result.rc != 0
