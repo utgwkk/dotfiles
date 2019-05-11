@@ -11,6 +11,10 @@ HISTFILE=~/.zsh_history
 HISTSIZE=1000000
 SAVEHIST=1000000
 
+# Do not record a mistyped command on .zsh_history
+# see also: http://www.zsh.org/mla/users/2014/msg00715.html
+zshaddhistory() {  whence ${${(z)1}[1]} >/dev/null || return 2 }
+
 setopt print_eight_bit
 setopt no_beep
 setopt no_flow_control
