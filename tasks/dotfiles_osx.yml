@@ -1,0 +1,7 @@
+- name: copy dotfiles for mac
+  copy:
+    src: "../files/{{ item }}"
+    dest: "~/{{ item }}"
+  with_items:
+    - ".tmux.osx.conf"
+  when: ansible_os_family == "Darwin"
