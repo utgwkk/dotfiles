@@ -26,8 +26,15 @@ setopt hist_ignore_all_dups
 setopt extended_glob
 
 setopt PROMPT_SUBST
+
+ghq_looking () {
+  if [[ -n "$GHQ_LOOK" ]]; then
+    echo " (looking)"
+  fi
+}
+
 source ~/local/etc/git-prompt.sh
-PS1="%{${fg[green]}%}[%n@%m]%{${fg[red]}%} %(?..[%?] )%{${fg[cyan]}%}\$(date +%H:%M:%S)%{${fg[yellow]}%}\$(__git_ps1)%{${reset_color}%} %~
+PS1="%{${fg[green]}%}[%n@%m]%{${fg[red]}%} %(?..[%?] )%{${fg[cyan]}%}\$(date +%H:%M:%S)%{${fg[yellow]}%}\$(__git_ps1)%{${fg[magenta]}%}\$(ghq_looking)%{${reset_color}%} %~
 % %{${fg[red]}%}%%%{${reset_color}%} "
 
 zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}'
