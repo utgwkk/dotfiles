@@ -3,12 +3,12 @@
 
 - name: check peco executable existence
   shell:
-    ls ~/local/bin/peco
+    which peco
   register: check_result
   check_mode: no
   ignore_errors: yes
 
-- name: install peco
+- name: install peco on linux
   shell:
     command_warning=False
     LATEST_ARCHIVE_URL=`curl -sL https://api.github.com/repos/peco/peco/releases | grep browser_download_url | grep peco_linux_amd64 | head -n1 | cut -d '"' -f 4`;
@@ -17,4 +17,10 @@
     curl -sL $LATEST_ARCHIVE_URL -o $TEMPDIR/peco_archive.tar.gz;
     tar xvf $TEMPDIR/peco_archive.tar.gz;
     cp $TEMPDIR/peco_linux_amd64/peco ~/local/bin
-  when: check_result.rc != 0
+  when: check_result.rc != 0 and ansible_os_family != "Darwin"
+
+- name: install peco with Homebrew
+  homebrew:
+    name: peco
+    state: present
+  when: ansible_os_family == "Darwin"
