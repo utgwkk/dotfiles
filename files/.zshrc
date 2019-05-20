@@ -55,7 +55,7 @@ export LESS_TERMCAP_so=$'\E[00;47;30m'   # Begins standout-mode.
 export LESS_TERMCAP_ue=$'\E[0m'          # Ends underline.
 export LESS_TERMCAP_us=$'\E[01;32m'      # Begins underline.
 
-export PATH=$PATH:/usr/local/bin:$HOME/local/bin
+export PATH=/usr/local/bin:$HOME/local/bin:$PATH
 
 if which peco > /dev/null 2>&1; then
   function peco-history-selection() {
