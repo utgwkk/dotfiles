@@ -1,4 +1,6 @@
 # vim:set ft=zsh :
+fpath=(~/zsh/functions/*(N-/) $fpath)
+
 autoload -U colors && colors
 autoload -Uz compinit
 compinit
