@@ -8,6 +8,7 @@ compinit
 setopt auto_pushd
 setopt pushd_ignore_dups
 setopt hist_ignore_space
+setopt share_history
 
 HISTFILE=~/.zsh_history
 HISTSIZE=1000000
