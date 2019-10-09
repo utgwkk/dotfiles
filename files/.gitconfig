@@ -24,6 +24,7 @@
   pm = push origin master
   st = status
   sta = stash
+  sw = switch
   type = cat-file -t
 [rebase]
   autosquash = true
