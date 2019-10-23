@@ -1,6 +1,8 @@
 YAML=default.yml
+ANSIBLE=pipenv run ansible-playbook
+LOCAL_OPTS=-c local -i localhost,
 ANSIBLE_OPTS=-D
 
 .PHONY: local
 local:
-	pipenv run ansible-playbook -c local -i localhost, $(ANSIBLE_OPTS) $(YAML)
+	$(ANSIBLE) $(LOCAL_OPTS) $(ANSIBLE_OPTS) $(YAML)
