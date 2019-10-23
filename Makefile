@@ -6,3 +6,7 @@ ANSIBLE_OPTS=-D
 .PHONY: local
 local:
 	$(ANSIBLE) $(LOCAL_OPTS) $(ANSIBLE_OPTS) $(YAML)
+
+.PHONY: dry-run
+dry-run:
+	$(ANSIBLE) $(LOCAL_OPTS) -C $(ANSIBLE_OPTS) $(YAML)
