@@ -25,6 +25,8 @@
   excludesfile = ~/.gitignore.global
 [include]
   path = ~/.gitconfig.local
+[pager]
+  branch = false
 [rebase]
   autosquash = true
 [user]
