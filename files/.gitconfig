@@ -15,7 +15,7 @@
   bl = blame
   br = branch
   cm = commit
-  co = !echo 'co (checkout) 使うのをやめてswitchやrestoreを使うようにしましょう'
+  co = checkout
   diffs = diff --staged
   dump = cat-file -p
   hist = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
