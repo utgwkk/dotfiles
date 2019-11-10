@@ -9,4 +9,3 @@ verify_ssl = true
 ansible = "*"
 
 [requires]
-python_version = "3.6"
