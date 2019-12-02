@@ -2,8 +2,6 @@
   br = branch
   co = checkout
   diffs = diff --staged
-  hist = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
-  ln = log --oneline
   st = status
   sw = switch
 [color]
