@@ -1,18 +1,11 @@
 [alias]
-  bl = blame
   br = branch
-  cm = commit
   co = checkout
   diffs = diff --staged
-  dump = cat-file -p
   hist = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
   ln = log --oneline
-  pfm = push --force origin master
-  pm = push origin master
   st = status
-  sta = stash
   sw = switch
-  type = cat-file -t
 [color]
   branch = auto
   diff = auto
