@@ -1,8 +1,6 @@
 [alias]
-  co = checkout
   diffs = diff --staged
   st = status
-  sw = switch
 [color]
   branch = auto
   diff = auto
