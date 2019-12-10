@@ -6,3 +6,4 @@
         - dotfiles.yml
         - dotfiles_osx.yml
         - download_scripts.yml
+        - homebrew.yml

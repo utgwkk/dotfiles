@@ -1,0 +1,10 @@
+- homebrew:
+    name: [
+      awscli,
+      coreutils,
+      ghq,
+      peco,
+      tig,
+      tmux,
+    ]
+    state: present
