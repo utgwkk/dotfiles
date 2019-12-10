@@ -1,5 +1,4 @@
 [alias]
-  br = branch
   co = checkout
   diffs = diff --staged
   st = status
