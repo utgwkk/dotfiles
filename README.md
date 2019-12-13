@@ -21,5 +21,5 @@ Note that servers in `./hosts` can be connected with SSH (except localhost).
 ## apply locally
 
 ```console
-$ make local
+$ make apply
 ```
