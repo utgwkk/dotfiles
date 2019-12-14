@@ -16,6 +16,3 @@
   branch = false
 [rebase]
   autosquash = true
-[user]
-  email = utagawakiki@gmail.com
-  name = UTAGAWA Kiki
