@@ -8,13 +8,14 @@ ANSIBLE_OPTS=-D
 
 default: dry-run
 
-.PHONY: create-venv
-create-venv:
-	[ -d "$(VENV_DIR)" ] || $(PYTHON) -m venv $(VENV_DIR)
+$(VENV_DIR)/bin/python:
+	$(PYTHON) -m venv $(VENV_DIR)
+
+$(VENV_DIR)/bin/ansible: $(VENV_DIR)/bin/python
+	$(PIP) install ansible
 
 .PHONY: pip-install
-pip-install: create-venv
-	$(PIP) show ansible > /dev/null || $(PIP) install ansible
+pip-install: $(VENV_DIR)/bin/ansible
 
 .PHONY: apply
 apply: pip-install
