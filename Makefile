@@ -9,14 +9,14 @@ REMOTE_HOSTS=
 
 default: dry-run
 
-$(VENV_DIR)/bin/python:
+$(VENV_DIR):
 	$(PYTHON) -m venv $(VENV_DIR)
 
-$(VENV_DIR)/bin/ansible: $(VENV_DIR)/bin/python
+$(ANSIBLE): $(VENV_DIR)
 	$(PIP) install ansible
 
 .PHONY: pip-install
-pip-install: $(VENV_DIR)/bin/ansible
+pip-install: $(ANSIBLE)
 
 .PHONY: apply
 apply: pip-install
