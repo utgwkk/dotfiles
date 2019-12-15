@@ -1,24 +1,12 @@
 # dotfiles
-## apply
 
-Prepare `hosts` file such that:
-
-```
-[server]
-server1
-server2
-localhost ansible_connection=local
-```
+## Check what will happen
 
 ```console
-$ pip install pipenv # if you have not installed pipenv
-$ pipenv install
-$ pipenv run ansible-playbook -i ./hosts default.yml
+$ make
 ```
 
-Note that servers in `./hosts` can be connected with SSH (except localhost).
-
-## apply locally
+## Apply
 
 ```console
 $ make apply

@@ -1,19 +1,25 @@
 YAML=default.yml
-PIPENV=$(shell which pipenv)
-ANSIBLE=$(PIPENV) run ansible-playbook
+PYTHON=python3
+VENV_DIR=./venv
+PIP=$(VENV_DIR)/bin/pip
+ANSIBLE=$(VENV_DIR)/bin/ansible-playbook
 LOCAL_OPTS=-c local -i localhost,
 ANSIBLE_OPTS=-D
 
 default: dry-run
 
-.PHONY: check-pipenv-is-installed
-check-pipenv-is-installed:
-	which pipenv || ( echo 'Please install pipenv.' && exit 1 )
+.PHONY: create-venv
+create-venv:
+	[ -d "$(VENV_DIR)" ] || $(PYTHON) -m venv $(VENV_DIR)
+
+.PHONY: pip-install
+pip-install: create-venv
+	$(PIP) show ansible > /dev/null || $(PIP) install ansible
 
 .PHONY: apply
-apply: check-pipenv-is-installed
+apply: pip-install
 	$(ANSIBLE) $(LOCAL_OPTS) $(ANSIBLE_OPTS) $(YAML)
 
 .PHONY: dry-run
-dry-run: check-pipenv-is-installed
+dry-run: pip-install
 	$(ANSIBLE) $(LOCAL_OPTS) -C $(ANSIBLE_OPTS) $(YAML)
