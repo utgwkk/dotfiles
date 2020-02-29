@@ -3,6 +3,7 @@ alias l='ls'
 alias la='ls -A'
 alias ll='ls -l'
 alias ls='ls -F --color=auto'
+alias peco='peco --on-cancel=error'
 
 if [ "`uname`" = "Darwin" ]; then
   alias ls='ls -FG'
