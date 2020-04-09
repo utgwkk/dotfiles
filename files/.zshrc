@@ -16,7 +16,7 @@ SAVEHIST=1000000
 
 # Do not record a mistyped command on .zsh_history
 # see also: http://www.zsh.org/mla/users/2014/msg00715.html
-zshaddhistory() {  whence ${${(z)1}[1]} >/dev/null || return 2 }
+zshaddhistory() { whence ${${(z)1}[1]} >/dev/null || return 2 }
 
 setopt print_eight_bit
 setopt no_beep
@@ -42,6 +42,7 @@ GIT_PS1_SHOWSTASHSTATE=true
 GIT_PS1_SHOWUPSTREAM=auto
 
 source ~/.aliases
+
 export LESS='-i -M -R -W'
 export PAGER=less
 export LESS_TERMCAP_mb=$'\E[01;31m'      # Begins blinking.
