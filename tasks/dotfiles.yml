@@ -4,9 +4,7 @@
     dest: "~/{{ item }}"
   with_items:
     - ".aliases"
-    - ".profile"
     - ".zshrc"
-    - ".zprofile"
     - ".zlogin"
     - ".zlogout"
     - ".gitconfig"
