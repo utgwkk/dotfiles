@@ -8,6 +8,6 @@
     - ".zlogin"
     - ".zlogout"
     - ".gitconfig"
-    - ".gitignore.global"
+    - ".config/git/ignore"
     - ".vimrc"
     - ".tmux.conf"

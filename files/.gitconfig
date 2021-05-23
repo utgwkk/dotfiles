@@ -9,7 +9,6 @@
 [core]
   autocrlf = input
   editor = vim
-  excludesfile = ~/.gitignore.global
 [include]
   path = ~/.gitconfig.local
 [pager]
