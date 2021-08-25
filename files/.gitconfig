@@ -1,5 +1,3 @@
-[alias]
-  diffs = diff --staged
 [color]
   branch = auto
   diff = auto
