@@ -13,7 +13,7 @@
     - ".zshrc"
     - ".zlogin"
     - ".zlogout"
-    - ".gitconfig"
+    - ".config/git/config"
     - ".config/git/ignore"
     - ".vimrc"
     - ".tmux.conf"
