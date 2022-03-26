@@ -8,7 +8,7 @@
   autocrlf = input
   editor = vim
 [include]
-  path = ~/.gitconfig.local
+  path = ~/.config/git/local
 [pager]
   branch = false
 [rebase]
