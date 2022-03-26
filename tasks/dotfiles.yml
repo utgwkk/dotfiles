@@ -1,3 +1,9 @@
+- name: create ~/.config
+  file: path=~/.config state=directory mode=0755
+
+- name: create ~/.config/git
+  file: path=~/.config/git state=directory mode=0755
+
 - name: copy dotfiles
   copy:
     src: "../files/{{ item }}"
