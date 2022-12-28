@@ -33,3 +33,7 @@ ifeq ($(REMOTE_HOSTS),)
 else
 	$(ANSIBLE) -i $(REMOTE_HOSTS), -C $(ANSIBLE_OPTS) $(YAML)
 endif
+
+.PHONY: clean-venv
+clean-venv:
+	rm -rf $(VENV_DIR)
