@@ -57,7 +57,7 @@ export PATH=/usr/local/bin:$HOME/local/bin:$PATH
 
 if [ test `which peco > /dev/null 2>&1` ] && [ test `which tac > /dev/null 2>&1` ] && [ test `which awk > /dev/null 2>&1` ]; then
   function peco-history-selection() {
-    BUFFER=`history -n 1 | tac | awk '!a[$0]++' | peco`
+    BUFFER=`history -n 1 | tac | awk '!a[$0]++' | peco | sed -e 's/\\\\n/\n/g'`
     CURSOR=$#BUFFER
     zle reset-prompt
   }
