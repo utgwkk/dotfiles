@@ -3,6 +3,8 @@
       awscli,
       coreutils,
       ghq,
+      git,
+      jq,
       peco,
       tig,
       tmux,
