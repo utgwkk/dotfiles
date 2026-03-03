@@ -2,10 +2,14 @@
     name: [
       awscli,
       coreutils,
+      ffmpeg,
       ghq,
       git,
+      go,
       jq,
+      imagemagick,
       peco,
+      sqlite,
       tig,
       tmux,
     ]
