@@ -4,10 +4,8 @@
     "allow": [
       "Bash(aws sts get-cellar-identity:*)",
       "Bash(chmod:*)",
-      "Bash(gh pr create:*)",
       "Bash(gh pr list:*)",
       "Bash(gh pr status:*)",
-      "Bash(gh repo edit:*)",
       "Bash(gh repo list:*)",
       "Bash(git add:*)",
       "Bash(git commit:*)",
@@ -30,6 +28,8 @@
       "WebFetch"
     ],
     "ask": [
+      "Bash(gh pr create:*)",
+      "Bash(gh repo edit:*)",
       "Bash(git branch -d:*)",
       "Bash(git branch -D:*)",
       "Bash(git checkout:*)",
