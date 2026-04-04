@@ -22,6 +22,7 @@
       "Bash(ls:*)"
     ],
     "ask": [
+      "Bash(git rm:*)",
       "Bash(git push:*)"
     ],
     "defaultMode": "default"
