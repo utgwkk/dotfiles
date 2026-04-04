@@ -1,11 +1,19 @@
 {
   "permissions": {
     "allow": [
+      "Bash(git add:*)",
+      "Bash(git commit:*)",
+      "Bash(git fetch:*)",
+      "Bash(git log:*)",
+      "Bash(git merge:*)",
+      "Bash(git pull:*)",
+      "Bash(git status:*)",
       "Bash(make)",
       "Bash(make dry-run)",
       "Bash(mkdir:*)"
     ],
     "ask": [
+      "Bash(git push:*)",
       "Bash(make apply)"
     ]
   }
