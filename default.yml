@@ -1,7 +1,9 @@
 - hosts: all
   tasks:
     - name: include playbooks
-      include_tasks: "tasks/{{ item }}"
+      include_tasks: "tasks/{{ playbook }}"
+      loop_control:
+        loop_var: playbook
       with_items:
         - dotfiles.yml
         - dotfiles_osx.yml
