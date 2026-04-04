@@ -1,7 +1,21 @@
+- name: create ~/local/bin
+  file: path=~/local/bin state=directory mode=0755
+  when: ansible_os_family == "Darwin"
+
 - name: copy dotfiles for mac
   copy:
     src: "../files/{{ item }}"
     dest: "~/{{ item }}"
   with_items:
     - ".tmux.osx.conf"
+  when: ansible_os_family == "Darwin"
+
+- name: copy scripts for mac
+  copy:
+    src: "../files/{{ item }}"
+    dest: "~/{{ item }}"
+    mode: "0755"
+  with_items:
+    - "local/bin/claude-notify-approval.sh"
+    - "local/bin/claude-notify-stop.sh"
   when: ansible_os_family == "Darwin"

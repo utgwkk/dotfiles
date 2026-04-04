@@ -4,6 +4,9 @@
 - name: create ~/.config/git
   file: path=~/.config/git state=directory mode=0755
 
+- name: create ~/.claude
+  file: path=~/.claude state=directory mode=0755
+
 - name: copy dotfiles
   copy:
     src: "../files/{{ item }}"
@@ -18,3 +21,5 @@
     - ".config/git/ignore"
     - ".vimrc"
     - ".tmux.conf"
+    - ".claude/CLAUDE.md"
+    - ".claude/settings.json"
