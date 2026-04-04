@@ -23,6 +23,7 @@
       "Bash(go install:*)",
       "Bash(go list:*)",
       "Bash(go mod tidy)",
+      "Bash(go test:*)",
       "Bash(go vet:*)",
       "Bash(ls:*)",
       "Bash(mkdir:*)"
