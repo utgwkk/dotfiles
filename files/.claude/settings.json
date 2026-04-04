@@ -30,6 +30,8 @@
       "WebFetch"
     ],
     "ask": [
+      "Bash(git branch -d:*)",
+      "Bash(git branch -D:*)",
       "Bash(git checkout:*)",
       "Bash(git rm:*)",
       "Bash(git push:*)"
