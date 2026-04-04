@@ -4,10 +4,14 @@
     "allow": [
       "Bash(aws sts get-cellar-identity:*)",
       "Bash(chmod:*)",
-      "Bash(gh pr:*)",
-      "Bash(gh repo:*)",
+      "Bash(gh pr create:*)",
+      "Bash(gh pr list:*)",
+      "Bash(gh pr status:*)",
+      "Bash(gh repo edit:*)",
+      "Bash(gh repo list:*)",
       "Bash(git add:*)",
       "Bash(git commit:*)",
+      "Bash(git diff:*)",
       "Bash(git fetch:*)",
       "Bash(git log:*)",
       "Bash(git merge:*)",
@@ -24,6 +28,7 @@
       "Bash(mkdir:*)"
     ],
     "ask": [
+      "Bash(git checkout:*)",
       "Bash(git rm:*)",
       "Bash(git push:*)"
     ],
