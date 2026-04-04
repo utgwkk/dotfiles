@@ -19,7 +19,8 @@
       "Bash(go list:*)",
       "Bash(go mod tidy)",
       "Bash(go vet:*)",
-      "Bash(ls:*)"
+      "Bash(ls:*)",
+      "Bash(mkdir:*)"
     ],
     "ask": [
       "Bash(git rm:*)",
