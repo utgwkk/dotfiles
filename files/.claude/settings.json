@@ -3,6 +3,7 @@
   "permissions": {
     "allow": [
       "Bash(aws sts get-cellar-identity:*)",
+      "Bash(chmod:*)",
       "Bash(gh pr:*)",
       "Bash(gh repo:*)",
       "Bash(git add:*)",
