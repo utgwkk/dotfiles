@@ -1,0 +1,11 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(make)",
+      "Bash(make dry-run)"
+    ],
+    "ask": [
+      "Bash(make apply)"
+    ]
+  }
+}
