@@ -26,7 +26,8 @@
       "Bash(go test:*)",
       "Bash(go vet:*)",
       "Bash(ls:*)",
-      "Bash(mkdir:*)"
+      "Bash(mkdir:*)",
+      "WebFetch"
     ],
     "ask": [
       "Bash(git checkout:*)",
