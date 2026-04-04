@@ -1,5 +1,4 @@
 .ruby-version
 .python-version
-.vscode/
 
 .claude/settings.local.json
