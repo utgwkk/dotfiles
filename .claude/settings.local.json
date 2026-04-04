@@ -2,7 +2,8 @@
   "permissions": {
     "allow": [
       "Bash(make)",
-      "Bash(make dry-run)"
+      "Bash(make dry-run)",
+      "Bash(mkdir:*)"
     ],
     "ask": [
       "Bash(make apply)"
