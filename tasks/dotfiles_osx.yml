@@ -18,4 +18,5 @@
   with_items:
     - "local/bin/claude-notify-approval.sh"
     - "local/bin/claude-notify-stop.sh"
+    - "local/bin/claude-statusline.sh"
   when: ansible_os_family == "Darwin"
