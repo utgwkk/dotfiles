@@ -2,7 +2,7 @@
 set -ex
 
 input=$(cat)
-cwd=$(echo "$input" | python3 -c "import sys,json; d=json.load(sys.stdin); print(d.get('cwd',''))" 2>/dev/null || true)
+cwd=$(echo "$input" | jq -r '.cwd // ""' 2>/dev/null || true)
 dirname=$(basename "$cwd")
 
 if [ -n "$dirname" ]; then
