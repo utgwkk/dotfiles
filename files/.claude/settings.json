@@ -23,6 +23,7 @@
       "Bash(go mod tidy)",
       "Bash(go test *)",
       "Bash(go vet *)",
+      "Bash(jq *)",
       "Bash(ls *)",
       "Bash(mkdir *)",
       "WebFetch"
