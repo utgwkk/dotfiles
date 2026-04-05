@@ -46,7 +46,8 @@
           {
             "type": "command",
             "command": "~/local/bin/claude-notify-approval.sh",
-            "timeout": 60
+            "timeout": 60,
+            "async": true
           }
         ]
       }
@@ -57,7 +58,8 @@
           {
             "type": "command",
             "command": "~/local/bin/claude-notify-stop.sh",
-            "timeout": 60
+            "timeout": 60,
+            "async": true
           }
         ]
       }
