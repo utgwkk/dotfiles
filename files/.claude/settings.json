@@ -6,6 +6,7 @@
       "Bash(chmod *)",
       "Bash(gh pr list *)",
       "Bash(gh pr status *)",
+      "Bash(gh pr view *)",
       "Bash(gh repo list *)",
       "Bash(git add *)",
       "Bash(git commit *)",
