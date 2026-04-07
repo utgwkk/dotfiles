@@ -2,3 +2,4 @@
 .python-version
 
 .claude/settings.local.json
+.claude/worktrees/
