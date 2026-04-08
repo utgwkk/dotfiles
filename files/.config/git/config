@@ -10,6 +10,8 @@
   excludesfile = ~/.config/git/ignore
 [include]
   path = ~/.config/git/local
+[init]
+  defaultBranch = main
 [pager]
   branch = false
 [rebase]
