@@ -4,6 +4,9 @@
 - name: create ~/.config/git
   file: path=~/.config/git state=directory mode=0755
 
+- name: create ~/.config/uv
+  file: path=~/.config/uv state=directory mode=0755
+
 - name: create ~/.claude
   file: path=~/.claude state=directory mode=0755
 
@@ -19,6 +22,7 @@
     - ".zlogout"
     - ".config/git/config"
     - ".config/git/ignore"
+    - ".config/uv/uv.toml"
     - ".vimrc"
     - ".tmux.conf"
     - ".claude/CLAUDE.md"
