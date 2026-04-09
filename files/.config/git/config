@@ -4,10 +4,18 @@
   grep = auto
   interactive = auto
   status = auto
+[commit]
+  gpgsign = true
 [core]
   autocrlf = input
   editor = vim
   excludesfile = ~/.config/git/ignore
+[gpg]
+# specify signing key in ~/.config/git/local
+# example:
+# [user]
+#   signingkey = ~/.ssh/id_ecdsa
+  format = ssh
 [include]
   path = ~/.config/git/local
 [init]
