@@ -27,3 +27,4 @@
     - ".tmux.conf"
     - ".claude/CLAUDE.md"
     - ".claude/settings.json"
+    - ".claude/keybindings.json"
