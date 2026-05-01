@@ -18,7 +18,7 @@
       "bindings": {
         "escape": "chat:cancel",
         "ctrl+x ctrl+k": "chat:killAgents",
-        "shift+tab": "chat:cycleMod Pe",
+        "shift+tab": "chat:cycleMode",
         "meta+p": "chat:modelPicker",
         "meta+o": "chat:fastMode",
         "meta+t": "chat:thinkingToggle",
