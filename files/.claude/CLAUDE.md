@@ -49,6 +49,7 @@
 - ブランチの切り替えには `git checkout` ではなく `git switch` コマンドを用います
   - 新規ブランチの作成: `git switch -c new-branch`
   - 既存ブランチへの切り替え: `git switch existing-branch`
+- `git` コマンドの `-C` オプションは使わず、カレントディレクトリを移動する
 
 # `gh` CLI
 

@@ -43,6 +43,9 @@
       "Bash(git push *)",
       "Bash(rm *)"
     ],
+    "deny": [
+      "Bash(git -C *)"
+    ],
     "defaultMode": "default"
   },
   "hooks": {
