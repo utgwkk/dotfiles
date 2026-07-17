@@ -4,6 +4,9 @@
 - name: create ~/.config/git
   file: path=~/.config/git state=directory mode=0755
 
+- name: create ~/.config/mise
+  file: path=~/.config/mise state=directory mode=0755
+
 - name: create ~/.config/uv
   file: path=~/.config/uv state=directory mode=0755
 
@@ -22,6 +25,7 @@
     - ".zlogout"
     - ".config/git/config"
     - ".config/git/ignore"
+    - ".config/mise/config.toml"
     - ".config/uv/uv.toml"
     - ".vimrc"
     - ".tmux.conf"
